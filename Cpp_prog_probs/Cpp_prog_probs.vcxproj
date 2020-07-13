@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test1.cpp" />
+    <ClCompile Include="test2.cpp" />
+    <ClCompile Include="test3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />

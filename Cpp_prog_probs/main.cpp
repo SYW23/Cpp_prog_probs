@@ -16,7 +16,9 @@ int main()
 		cout << "不是回文字符串" << endl;
 	} */
 
-	test3();
+	// test3();
+
+	test4();
 
 	system("pause");
 	return 0;

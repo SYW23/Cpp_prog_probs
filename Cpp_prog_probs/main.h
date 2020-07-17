@@ -1,6 +1,7 @@
 #pragma once
-int test1();
-bool test2();
-int test3();
-int test4();
-int test5();
+extern int test1();
+extern bool test2();
+extern int test3();
+extern int test4();
+extern int test5();
+extern int test6();

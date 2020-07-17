@@ -20,7 +20,9 @@ int main()
 
 	//test4();
 
-	test5();
+	//test5();
+
+	test6();
 
 	system("pause");
 	return 0;

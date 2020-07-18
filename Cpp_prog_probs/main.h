@@ -5,3 +5,4 @@ extern int test3();
 extern int test4();
 extern int test5();
 extern int test6();
+extern int test7();

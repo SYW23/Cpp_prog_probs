@@ -8,3 +8,4 @@ extern int test6();
 extern int test7();
 extern int test8();
 extern int test9();
+extern int test10();

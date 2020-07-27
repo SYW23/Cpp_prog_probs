@@ -13,6 +13,14 @@ struct TreeNode {
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+bool hasPathSum(TreeNode* root, int sum) {
+	if (root)
+		return false;
+	if (root->left == nullptr && root->right == nullptr && sum == root->val)
+		return true;
+	return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
+}
+
 int test10(){
 	TreeNode LR{ 5 };
 	TreeNode L1{ 4 };
@@ -33,46 +41,7 @@ int test10(){
 	L2.right = &R3;
 	R2.right = &R4;
 
-
-    TreeNode* root = &LR;
-    int sum = 22;
-    deque<TreeNode*> s;
-    int res = root->val;
-
-
-    s.push(root);
-    TreeNode* curNode = root;
-    while (not s.empty())
-    {
-        if (res != sum)
-        {
-            if (curNode->left)
-            {
-                curNode = curNode->left;
-                s.push(curNode);
-                res += curNode->val;
-            }
-            else if (curNode->right)
-            {
-                curNode = curNode->right;
-                s.push(curNode);
-                res += curNode->val;
-            }
-            else
-            {
-                res -= curNode->val;
-                curNode = s.top();
-                s.pop();
-            }
-            cout << res << endl;
-        }
-        else
-        {
-            return true;
-        }
-    }
-    return false;
-
+	cout << hasPathSum(&LR, 22) << endl;
 
 
 	return 0;

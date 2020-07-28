@@ -14,9 +14,9 @@ struct TreeNode {
 };
 
 bool hasPathSum(TreeNode* root, int sum) {
-	if (root)
+	if (!root)
 		return false;
-	if (root->left == nullptr && root->right == nullptr && sum == root->val)
+	if (root->val == sum && !root->left && !root->right)
 		return true;
 	return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
 }
